@@ -1,0 +1,26 @@
+<h2>{{title}}</h2>
+<div class="navbar navbar-default">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>      
+    </button>
+  </div> 
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+    <li><button class="btn btn-info" [class.active]="filterBy=='all'" (click)="filterBy='all'">All</button></li>
+    <li><button class="btn btn-info" [class.active]="filterBy=='food'" (click)="filterBy='food'">Food</button></li>
+    <li><button class="btn btn-info" [class.active]="filterBy=='people'" (click)="filterBy='people'">Portrait</button></li>
+    <li><button class="btn btn-info" [class.active]="filterBy=='travel'" (click)="filterBy='travel'">Travel</button></li>
+  <!-- <button class="btn btn-info" [class.active]="filterBy=='library'" (click)="filterBy='library'">Library</button> -->
+    </ul>  
+</div>
+<ul id="thumbnailsList"> 
+  <li *ngFor="let image of (visibleImages | imageFilter:filterBy)">
+    <a [routerLink] ="['/image', image.id]">
+    <img src="{{image.url}}" class="tn" width="auto" height="160">
+    </a>
+  </li>
+</ul>
+

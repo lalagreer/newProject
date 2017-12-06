@@ -1,0 +1,20 @@
+import { Ng2CarouselamosModule } from 'ng2-carouselamos';
+import { Component, OnInit } from '@angular/core';
+import { ImageService} from './shared/image.service';
+import { ActivatedRoute } from '@angular/router';
+
+@Component({
+  selector: 'image-detail',
+  templateUrl: './image-detail.component.html',
+  styleUrls: ['./image-detail.component.css']
+})
+export class ImageDetailComponent implements OnInit {
+  image:any
+  constructor(private imageService: ImageService, private route: ActivatedRoute) {}
+
+  ngOnInit(){
+    this.image=this.imageService.getImage(
+      +this.route.snapshot.params['id'] // this provides initial value of the route papameter (+ sign converts id to number..)
+    ) 
+  }  
+}
