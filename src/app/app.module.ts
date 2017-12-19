@@ -1,5 +1,5 @@
 import { CarouselModule } from 'ngx-bootstrap/carousel';
-import { RouterModule } from '@angular/router';
+import { RouterModule, RouterOutlet, Routes } from '@angular/router';
 import { appRoutes } from './../routes';
 import { ImageFilterPipe } from './image-detail/shared/filter.pipe';
 import { ImageService } from './image-detail/shared/image.service';
@@ -13,6 +13,10 @@ import { AppComponent } from './app.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ImageDetailComponent } from './image-detail/image-detail.component';
 import { AboutComponent } from './about/about.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
+
+
 
 @NgModule({
   declarations: [
@@ -30,6 +34,8 @@ import { AboutComponent } from './about/about.component';
     AlertModule.forRoot(),
     RouterModule.forRoot(appRoutes),
     CarouselModule.forRoot(),
+    BsDropdownModule.forRoot(),
+    ButtonsModule.forRoot(),
   ],
   providers: [ImageService, ImageFilterPipe],
   bootstrap: [AppComponent]

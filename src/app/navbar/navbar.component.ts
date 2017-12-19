@@ -1,3 +1,5 @@
+import { AboutComponent } from './../about/about.component';
+import { GalleryComponent } from './../gallery/gallery.component';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-    about = 'About ';
-    gallery= 'Gallery ';
-     
+    aboutLink = 'About ';
+    galleryLink= 'Gallery ';
+
   constructor() { }
 
   ngOnInit() {

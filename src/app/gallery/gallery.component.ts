@@ -1,5 +1,6 @@
 import { ImageService } from '../image-detail/shared/image.service';
 import { Component, OnChanges, Input } from '@angular/core';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
 @Component({
   selector: 'app-gallery',

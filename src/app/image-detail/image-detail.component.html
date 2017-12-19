@@ -1,13 +1,19 @@
-<div class="row">
-  <div class="col-md-12 col-sm">
+
+<div class="row ">
+  <div class="col-md-12 col-xs-12">
     <div [ngStyle]="{'background-image':'url('+ image.url +')'}" class="img-container">
+      <a routerLink="/" type="button" class="close" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </a>
     </div>
   </div>
 </div>
 <div class ="row">
-  <div class="col-md-12 col-sm caption-row">
+  <div class="col-md-12 col-xs-12 col-lg-11 caption-row">
     <span id="caption">
       {{ image.caption }}
     </span>
   </div>
 </div>
+
+  

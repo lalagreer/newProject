@@ -1,17 +1,17 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-header ">
+    <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-target="#mainNav" data-toggle="collapse">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>      
       </button>
     </div> 
-    <div class="navbar-collapse collapse" id="mainNav">
-       <img src="/assets/images/logo.gif" height="80">
-            <ul class="nav navbar-nav navbar-right">
-                <li class='active'><a href='#'>{{gallery}}</a></li>    
-                <li class='active'><a href='/about'>{{about}}</a></li>
-            </ul>
+    <div class="navbar-collapse collapse" id="mainNav">   
+        <img src="/assets/images/logo.gif" height="70">  
+            <div class="label nav navbar-nav navbar-right">
+                <li class='btn btn-outline-dark logo'><a routerLink="" routerLinkActive="active">{{galleryLink}}</a></li>    
+                <li class='btn btn-outline-dark logo'><a routerLink="/about" routerLinkActive="active">{{aboutLink}}</a></li>
+            </div>
     </div>
 </nav>
 

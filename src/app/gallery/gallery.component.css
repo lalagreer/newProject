@@ -1,7 +1,13 @@
 ul{ padding: 0;  margin: 20px auto}
 li { display: inline; }
-.tn{
+.active{
     margin: 6px;
     border: 4px solid #eee;
-    box-shadow: #555 1px 1px 8px 1px;
+    box-shadow: rgb(157, 228, 228) 1px 1px 8px 1px;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: bolder;
+    font-size: 18px;
+}
+.custom-display{
+    display: inline-block;
 }
