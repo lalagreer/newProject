@@ -13,20 +13,13 @@
           <li><a class="btn btn-outline-info" [class.active]="filterBy=='travel'" (click)="filterBy='travel'">Travel</a></li>
     </ul>  
 </div>
-<div class="container">
-  <div class="row">
-    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-<ul id="thumbnailsList"> 
+<ul id="thumbnailsList" > 
   <li *ngFor="let image of (visibleImages | imageFilter:filterBy)">
     <a [routerLink] ="['/image', image.id]">
-    <img src="{{image.url}}" class="tn" width="auto" height="160">
+    <div class="thumbnail col-lg-4 col-md-4 col-sm-4 col-xs-12">
+      <img src="{{image.url}}">
+    </div>
   </a>
-    <span id="caption">
-    <p> {{ image.caption }}</p>   
-    </span>
   </li>
 </ul>
-    </div>
-  </div>
-</div>
 

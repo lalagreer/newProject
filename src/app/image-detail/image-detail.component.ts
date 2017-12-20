@@ -2,7 +2,8 @@ import { CarouselModule } from 'ngx-bootstrap/carousel'
 import { Component, OnInit } from '@angular/core';
 import { ImageService} from './shared/image.service';
 import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
+import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
+
 
 @Component({
   selector: 'image-detail',
@@ -17,6 +18,7 @@ export class ImageDetailComponent implements OnInit {
   cancel() {
     this.location.back();
   }
+  
   ngOnInit(){
     this.image=this.imageService.getImage(
       +this.route.snapshot.params['id'] // this provides initial value of the route papameter (+ sign converts id to number..)
